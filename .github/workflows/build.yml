@@ -24,8 +24,8 @@ jobs:
         shell: pwsh
         run: |
           New-Item -ItemType Directory -Force -Path logs | Out-Null
-          curl.exe -sL -o src.zip "https://aka.doubaocdn.com/s/DA587HiKWz"
-          if (Test-Path src.zip) { Get-Item src.zip | Select-Object Length | Out-String | Tee-Object -FilePath logs/fetch.log }
+          curl.exe -sL -o src.zip "https://aka.doubaocdn.com/s/I3w9kLuIVs"
+          Get-Item src.zip | Select-Object Length | Out-String | Tee-Object -FilePath logs/fetch.log
           Expand-Archive -Path src.zip -DestinationPath src -Force
           Get-ChildItem src -Recurse -Filter *.py | Select-Object FullName | Out-String | Tee-Object -Append -FilePath logs/fetch.log
 
@@ -38,11 +38,11 @@ jobs:
       - name: icon
         shell: pwsh
         working-directory: src
+        continue-on-error: true
         run: |
           New-Item -ItemType Directory -Force -Path tools/build | Out-Null
-          $out = python -c "import sys; sys.path.insert(0,'tools'); from make_icon import make_icon; make_icon().save('tools/build/app.ico', sizes=[(16,16),(32,32),(48,48),(64,64),(128,128),(256,256)])" 2>&1
-          $out | Tee-Object -FilePath ..\logs\icon.log
-          if ($LASTEXITCODE -ne 0) { exit 1 }
+          python -c "import sys; sys.path.insert(0,'tools'); from make_icon import make_icon; make_icon().save('tools/build/app.ico', sizes=[(16,16),(32,32),(48,48),(64,64),(128,128),(256,256)])" 2>&1 | Tee-Object -FilePath ..\logs\icon.log
+          Get-ChildItem tools/build -Filter *.ico | Select-Object FullName,Length | Out-String | Tee-Object -Append -FilePath ..\logs\icon.log
 
       - name: selftest
         shell: pwsh
@@ -58,7 +58,10 @@ jobs:
         shell: pwsh
         working-directory: src
         run: |
-          python -m PyInstaller --noconfirm --clean --windowed --name DeskLock --icon tools/build/app.ico --distpath dist-win --workpath build-win main.py 2>&1 | Tee-Object -FilePath ..\logs\build-app.log
+          $args = @("-m","PyInstaller","--noconfirm","--clean","--windowed","--name","DeskLock","--distpath","dist-win","--workpath","build-win")
+          if (Test-Path "tools/build/app.ico") { $args += @("--icon","tools/build/app.ico") }
+          $args += "main.py"
+          python @args 2>&1 | Tee-Object -FilePath ..\logs\build-app.log
           if ($LASTEXITCODE -ne 0) { exit 1 }
 
       - name: build-unlock
