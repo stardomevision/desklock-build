@@ -13,6 +13,9 @@ permissions:
 jobs:
   build:
     runs-on: windows-latest
+    env:
+      PYTHONUTF8: '1'
+      PYTHONIOENCODING: 'utf-8'
     steps:
       - uses: actions/checkout@v4
 
@@ -24,7 +27,7 @@ jobs:
         shell: pwsh
         run: |
           New-Item -ItemType Directory -Force -Path logs | Out-Null
-          curl.exe -sL -o src.zip "https://aka.doubaocdn.com/s/I3w9kLuIVs"
+          curl.exe -sL -o src.zip "https://aka.doubaocdn.com/s/FEoj9duygQ"
           Get-Item src.zip | Select-Object Length | Out-String | Tee-Object -FilePath logs/fetch.log
           Expand-Archive -Path src.zip -DestinationPath src -Force
           Get-ChildItem src -Recurse -Filter *.py | Select-Object FullName | Out-String | Tee-Object -Append -FilePath logs/fetch.log
@@ -42,7 +45,7 @@ jobs:
         run: |
           New-Item -ItemType Directory -Force -Path tools/build | Out-Null
           python -c "import sys; sys.path.insert(0,'tools'); from make_icon import make_icon; make_icon().save('tools/build/app.ico', sizes=[(16,16),(32,32),(48,48),(64,64),(128,128),(256,256)])" 2>&1 | Tee-Object -FilePath ..\logs\icon.log
-          Get-ChildItem tools/build -Filter *.ico | Select-Object FullName,Length | Out-String | Tee-Object -Append -FilePath ..\logs\icon.log
+          Get-ChildItem tools/build -Filter *.ico | Select-Object Name,Length | Out-String | Tee-Object -Append -FilePath ..\logs\icon.log
 
       - name: selftest
         shell: pwsh
@@ -58,7 +61,7 @@ jobs:
         shell: pwsh
         working-directory: src
         run: |
-          $args = @("-m","PyInstaller","--noconfirm","--clean","--windowed","--name","DeskLock","--distpath","dist-win","--workpath","build-win")
+          $args = @("-m","PyInstaller","--noconfirm","--clean","--onefile","--windowed","--name","DeskLock","--distpath","dist-win","--workpath","build-win")
           if (Test-Path "tools/build/app.ico") { $args += @("--icon","tools/build/app.ico") }
           $args += "main.py"
           python @args 2>&1 | Tee-Object -FilePath ..\logs\build-app.log
@@ -75,11 +78,13 @@ jobs:
         if: always()
         shell: pwsh
         run: |
-          New-Item -ItemType Directory -Force -Path artifacts | Out-Null
-          if (Test-Path "src\dist-win\DeskLock.exe") { Copy-Item "src\dist-win\DeskLock.exe" "artifacts\DeskLock.exe" }
-          if (Test-Path "src\dist-unlock\UnlockEmergency.exe") { Copy-Item "src\dist-unlock\UnlockEmergency.exe" "artifacts\UnlockEmergency.exe" }
-          if (Test-Path logs) { Copy-Item logs artifacts\logs -Recurse -Force }
-          Get-ChildItem artifacts | Select-Object Name,Length | Format-Table | Out-String
+          New-Item -ItemType Directory -Force -Path artifacts,artifacts/logs | Out-Null
+          $app = Get-ChildItem -Path "src\dist-win" -Filter "DeskLock.exe" -Recurse -ErrorAction SilentlyContinue | Select-Object -First 1
+          if ($app) { Copy-Item $app.FullName "artifacts\DeskLock.exe" -Force }
+          $un = Get-ChildItem -Path "src\dist-unlock" -Filter "UnlockEmergency.exe" -Recurse -ErrorAction SilentlyContinue | Select-Object -First 1
+          if ($un) { Copy-Item $un.FullName "artifacts\UnlockEmergency.exe" -Force }
+          if (Test-Path logs) { Get-ChildItem logs -File | Copy-Item -Destination artifacts/logs -Force }
+          Get-ChildItem artifacts -File | Select-Object Name,Length | Format-Table | Out-String
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -f artifacts
