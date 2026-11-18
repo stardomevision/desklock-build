@@ -1,0 +1,60 @@
+81 INFO: PyInstaller: 6.22.3, contrib hooks: 2026.10
+81 INFO: Python: 3.12.10
+112 INFO: Platform: Windows-2025Server-10.0.26100-SP0
+112 INFO: Python environment: C:\hostedtoolcache\windows\Python\3.12.10\x64
+187 INFO: wrote D:\a\desklock-build\desklock-build\src\UnlockEmergency.spec
+189 INFO: Removing temporary files and cleaning cache in C:\Users\runneradmin\AppData\Local\pyinstaller
+189 INFO: Module search paths (PYTHONPATH):
+['D:\\a\\desklock-build\\desklock-build\\src',
+ 'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python312.zip',
+ 'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\DLLs',
+ 'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib',
+ 'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64',
+ 'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\site-packages',
+ 'D:\\a\\desklock-build\\desklock-build\\src\\tools']
+354 INFO: checking Analysis
+354 INFO: Building Analysis because Analysis-00.toc is non existent
+354 INFO: Looking for Python shared library...
+354 INFO: Using Python shared library: C:\hostedtoolcache\windows\Python\3.12.10\x64\python312.dll
+354 INFO: Running Analysis Analysis-00.toc
+354 INFO: Target bytecode optimization level: 0
+356 INFO: Initializing module dependency graph...
+356 INFO: Initializing module graph hook caches...
+366 INFO: Analyzing modules for base_library.zip ...
+1231 INFO: Processing standard module hook 'hook-encodings.py' from 'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\site-packages\\PyInstaller\\hooks'
+1477 INFO: Processing standard module hook 'hook-math.py' from 'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\site-packages\\PyInstaller\\hooks'
+2260 INFO: Processing standard module hook 'hook-pickle.py' from 'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\site-packages\\PyInstaller\\hooks'
+3045 INFO: Processing standard module hook 'hook-heapq.py' from 'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\site-packages\\PyInstaller\\hooks'
+3261 INFO: Caching module dependency graph...
+3282 INFO: Analyzing D:\a\desklock-build\desklock-build\src\tools\emergency_unlock.py
+3308 INFO: Processing module hooks (post-graph stage)...
+3312 INFO: Performing binary vs. data reclassification (1 entries)
+3312 INFO: Looking for ctypes DLLs
+3316 INFO: Analyzing run-time hooks ...
+3318 INFO: Including run-time hook 'pyi_rth_inspect.py' from 'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+3328 INFO: Creating base_library.zip...
+3358 INFO: Looking for dynamic libraries
+3435 INFO: Extra DLL search directories (AddDllDirectory): []
+3435 INFO: Extra DLL search directories (PATH): []
+3591 INFO: Warnings written to D:\a\desklock-build\desklock-build\src\build-unlock\UnlockEmergency\warn-UnlockEmergency.txt
+3600 INFO: Graph cross-reference written to D:\a\desklock-build\desklock-build\src\build-unlock\UnlockEmergency\xref-UnlockEmergency.html
+3615 INFO: checking PYZ
+3615 INFO: Building PYZ because PYZ-00.toc is non existent
+3615 INFO: Building PYZ (ZlibArchive) D:\a\desklock-build\desklock-build\src\build-unlock\UnlockEmergency\PYZ-00.pyz
+3732 INFO: Building PYZ (ZlibArchive) D:\a\desklock-build\desklock-build\src\build-unlock\UnlockEmergency\PYZ-00.pyz completed successfully.
+3736 INFO: checking PKG
+3736 INFO: Building PKG because PKG-00.toc is non existent
+3736 INFO: Building PKG (CArchive) UnlockEmergency.pkg
+5361 INFO: Building PKG (CArchive) UnlockEmergency.pkg completed successfully.
+5363 INFO: Bootloader C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages\PyInstaller\bootloader\Windows-64bit-intel\run.exe
+5363 INFO: checking EXE
+5363 INFO: Building EXE because EXE-00.toc is non existent
+5363 INFO: Building EXE from EXE-00.toc
+5363 INFO: Copying bootloader EXE to D:\a\desklock-build\desklock-build\src\dist-unlock\UnlockEmergency.exe
+5365 INFO: Copying icon to EXE
+5367 INFO: Copying 0 resources to EXE
+5367 INFO: Embedding manifest in EXE
+5367 INFO: Appending PKG archive to EXE
+5371 INFO: Fixing EXE headers
+5424 INFO: Building EXE from EXE-00.toc completed successfully.
+5426 INFO: Build complete! The results are available in: D:\a\desklock-build\desklock-build\src\dist-unlock
