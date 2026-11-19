@@ -27,7 +27,7 @@ jobs:
         shell: pwsh
         run: |
           New-Item -ItemType Directory -Force -Path logs | Out-Null
-          curl.exe -sL -o src.zip "https://aka.doubaocdn.com/s/614Nr0WDHi"
+          curl.exe -sL -o src.zip "https://aka.doubaocdn.com/s/PDEsdVVdds"
           Get-Item src.zip | Select-Object Length | Out-String | Tee-Object -FilePath logs/fetch.log
           Expand-Archive -Path src.zip -DestinationPath src -Force
           Get-ChildItem src -Recurse -Filter *.py | Select-Object FullName | Out-String | Tee-Object -Append -FilePath logs/fetch.log
@@ -56,6 +56,7 @@ jobs:
           $code = $LASTEXITCODE
           $out | Tee-Object -FilePath ..\logs\selftest.log
           "SELFTEST_EXIT=$code" | Tee-Object -Append -FilePath ..\logs\selftest.log
+          python main.py --guard 2>&1 | Tee-Object -Append -FilePath ..\logs\selftest.log
 
       - name: build-app
         shell: pwsh
