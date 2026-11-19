@@ -1,5 +1,5 @@
-临时目录: C:\Users\RUNNER~1\AppData\Local\Temp\desklock-selftest-fequ1gf2
-1) 锁定返回记录: {'platform': 'win', 'deny_spec': 'runneradmin:(OI)(CI)(RD,WD,AD,X,D)', 'locked_at': 1794984954, 'name': '测试文件夹'}
+临时目录: C:\Users\RUNNER~1\AppData\Local\Temp\desklock-selftest-yb1wk2oj
+1) 锁定返回记录: {'platform': 'win', 'deny_spec': 'runneradmin:(OI)(CI)(RD,WD,AD,X,D)', 'locked_at': 1795058561, 'name': '测试文件夹'}
 2) 锁定状态检测 = True  PASS
 3) 仍可列目录 = False  PASS
 4) 解锁后恢复可访问 = True  PASS

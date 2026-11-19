@@ -15,14 +15,14 @@ Collecting pywin32-ctypes>=0.2.1 (from pyinstaller)
 Collecting setuptools>=42.0.0 (from pyinstaller)
   Downloading setuptools-84.2.1-py3-none-any.whl.metadata (6.6 kB)
 Downloading pyinstaller-6.22.3-py3-none-win_amd64.whl (1.5 MB)
-   ---------------------------------------- 1.5/1.5 MB 19.2 MB/s  0:00:00
+   ---------------------------------------- 1.5/1.5 MB 25.4 MB/s  0:00:00
 Downloading pillow-13.0.0-cp312-cp312-win_amd64.whl (7.3 MB)
-   ---------------------------------------- 7.3/7.3 MB 56.1 MB/s  0:00:00
+   ---------------------------------------- 7.3/7.3 MB 63.7 MB/s  0:00:00
 Downloading pefile-2024.8.26-py3-none-any.whl (74 kB)
 Downloading pyinstaller_hooks_contrib-2026.10-py3-none-any.whl (463 kB)
 Downloading pywin32_ctypes-0.2.3-py3-none-any.whl (30 kB)
 Downloading setuptools-84.2.1-py3-none-any.whl (876 kB)
-   ---------------------------------------- 876.3/876.3 kB 19.2 MB/s  0:00:00
+   ---------------------------------------- 876.3/876.3 kB 19.8 MB/s  0:00:00
 Downloading altgraph-0.17.5-py2.py3-none-any.whl (21 kB)
 Installing collected packages: altgraph, setuptools, pywin32-ctypes, pyinstaller-hooks-contrib, pillow, pefile, pyinstaller
 
