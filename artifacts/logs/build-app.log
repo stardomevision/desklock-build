@@ -1,10 +1,10 @@
-328 INFO: PyInstaller: 6.22.3, contrib hooks: 2026.10
-328 INFO: Python: 3.12.10
-356 INFO: Platform: Windows-2025Server-10.0.26100-SP0
-356 INFO: Python environment: C:\hostedtoolcache\windows\Python\3.12.10\x64
-356 INFO: wrote D:\a\desklock-build\desklock-build\src\DeskLock.spec
-364 INFO: Removing temporary files and cleaning cache in C:\Users\runneradmin\AppData\Local\pyinstaller
-366 INFO: Module search paths (PYTHONPATH):
+287 INFO: PyInstaller: 6.22.3, contrib hooks: 2026.10
+287 INFO: Python: 3.12.10
+315 INFO: Platform: Windows-2025Server-10.0.26100-SP0
+315 INFO: Python environment: C:\hostedtoolcache\windows\Python\3.12.10\x64
+317 INFO: wrote D:\a\desklock-build\desklock-build\src\DeskLock.spec
+323 INFO: Removing temporary files and cleaning cache in C:\Users\runneradmin\AppData\Local\pyinstaller
+324 INFO: Module search paths (PYTHONPATH):
 ['D:\\a\\desklock-build\\desklock-build\\src',
  'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python312.zip',
  'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\DLLs',
@@ -12,54 +12,54 @@
  'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64',
  'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\site-packages',
  'D:\\a\\desklock-build\\desklock-build\\src']
-616 INFO: checking Analysis
-616 INFO: Building Analysis because Analysis-00.toc is non existent
-616 INFO: Looking for Python shared library...
-616 INFO: Using Python shared library: C:\hostedtoolcache\windows\Python\3.12.10\x64\python312.dll
-616 INFO: Running Analysis Analysis-00.toc
-616 INFO: Target bytecode optimization level: 0
-616 INFO: Initializing module dependency graph...
-630 INFO: Initializing module graph hook caches...
-644 INFO: Analyzing modules for base_library.zip ...
-2105 INFO: Processing standard module hook 'hook-encodings.py' from 'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\site-packages\\PyInstaller\\hooks'
-2476 INFO: Processing standard module hook 'hook-math.py' from 'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\site-packages\\PyInstaller\\hooks'
-3750 INFO: Processing standard module hook 'hook-pickle.py' from 'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\site-packages\\PyInstaller\\hooks'
-4894 INFO: Processing standard module hook 'hook-heapq.py' from 'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\site-packages\\PyInstaller\\hooks'
-5431 INFO: Caching module dependency graph...
-5476 INFO: Analyzing D:\a\desklock-build\desklock-build\src\main.py
-5539 INFO: Processing pre-find-module-path hook 'hook-tkinter.py' from 'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\site-packages\\PyInstaller\\hooks\\pre_find_module_path'
-5541 INFO: TclTkInfo: initializing cached Tcl/Tk info...
-6667 INFO: Processing standard module hook 'hook-_tkinter.py' from 'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\site-packages\\PyInstaller\\hooks'
-6790 INFO: Processing module hooks (post-graph stage)...
-6804 INFO: Processing standard module hook 'hook-_tkinter.py' from 'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\site-packages\\PyInstaller\\hooks'
-6824 INFO: Performing binary vs. data reclassification (927 entries)
-7527 INFO: Looking for ctypes DLLs
-7532 INFO: Analyzing run-time hooks ...
-7532 INFO: Including run-time hook 'pyi_rth_inspect.py' from 'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
-7536 INFO: Including run-time hook 'pyi_rth__tkinter.py' from 'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
-7561 INFO: Creating base_library.zip...
-7584 INFO: Looking for dynamic libraries
-7724 INFO: Extra DLL search directories (AddDllDirectory): []
-7724 INFO: Extra DLL search directories (PATH): []
-8331 INFO: Warnings written to D:\a\desklock-build\desklock-build\src\build-win\DeskLock\warn-DeskLock.txt
-8347 INFO: Graph cross-reference written to D:\a\desklock-build\desklock-build\src\build-win\DeskLock\xref-DeskLock.html
-8380 INFO: checking PYZ
-8380 INFO: Building PYZ because PYZ-00.toc is non existent
-8380 INFO: Building PYZ (ZlibArchive) D:\a\desklock-build\desklock-build\src\build-win\DeskLock\PYZ-00.pyz
-8552 INFO: Building PYZ (ZlibArchive) D:\a\desklock-build\desklock-build\src\build-win\DeskLock\PYZ-00.pyz completed successfully.
-8580 INFO: checking PKG
-8580 INFO: Building PKG because PKG-00.toc is non existent
-8580 INFO: Building PKG (CArchive) DeskLock.pkg
-12781 INFO: Building PKG (CArchive) DeskLock.pkg completed successfully.
-12805 INFO: Bootloader C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages\PyInstaller\bootloader\Windows-64bit-intel\runw.exe
-12805 INFO: checking EXE
-12805 INFO: Building EXE because EXE-00.toc is non existent
-12805 INFO: Building EXE from EXE-00.toc
-12805 INFO: Copying bootloader EXE to D:\a\desklock-build\desklock-build\src\dist-win\DeskLock.exe
-12809 INFO: Copying icon to EXE
-12811 INFO: Copying 0 resources to EXE
-12811 INFO: Embedding manifest in EXE
-12813 INFO: Appending PKG archive to EXE
-12821 INFO: Fixing EXE headers
-12910 INFO: Building EXE from EXE-00.toc completed successfully.
-12930 INFO: Build complete! The results are available in: D:\a\desklock-build\desklock-build\src\dist-win
+594 INFO: checking Analysis
+594 INFO: Building Analysis because Analysis-00.toc is non existent
+594 INFO: Looking for Python shared library...
+594 INFO: Using Python shared library: C:\hostedtoolcache\windows\Python\3.12.10\x64\python312.dll
+594 INFO: Running Analysis Analysis-00.toc
+594 INFO: Target bytecode optimization level: 0
+594 INFO: Initializing module dependency graph...
+606 INFO: Initializing module graph hook caches...
+633 INFO: Analyzing modules for base_library.zip ...
+1688 INFO: Processing standard module hook 'hook-heapq.py' from 'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\site-packages\\PyInstaller\\hooks'
+1798 INFO: Processing standard module hook 'hook-encodings.py' from 'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\site-packages\\PyInstaller\\hooks'
+3450 INFO: Processing standard module hook 'hook-math.py' from 'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\site-packages\\PyInstaller\\hooks'
+3741 INFO: Processing standard module hook 'hook-pickle.py' from 'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\site-packages\\PyInstaller\\hooks'
+5681 INFO: Caching module dependency graph...
+5723 INFO: Analyzing D:\a\desklock-build\desklock-build\src\main.py
+5807 INFO: Processing pre-find-module-path hook 'hook-tkinter.py' from 'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\site-packages\\PyInstaller\\hooks\\pre_find_module_path'
+5808 INFO: TclTkInfo: initializing cached Tcl/Tk info...
+6577 INFO: Processing standard module hook 'hook-_tkinter.py' from 'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\site-packages\\PyInstaller\\hooks'
+6723 INFO: Processing module hooks (post-graph stage)...
+6731 INFO: Processing standard module hook 'hook-_tkinter.py' from 'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\site-packages\\PyInstaller\\hooks'
+6751 INFO: Performing binary vs. data reclassification (927 entries)
+7383 INFO: Looking for ctypes DLLs
+7389 INFO: Analyzing run-time hooks ...
+7391 INFO: Including run-time hook 'pyi_rth_inspect.py' from 'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+7393 INFO: Including run-time hook 'pyi_rth__tkinter.py' from 'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+7425 INFO: Creating base_library.zip...
+7446 INFO: Looking for dynamic libraries
+7575 INFO: Extra DLL search directories (AddDllDirectory): []
+7577 INFO: Extra DLL search directories (PATH): []
+8163 INFO: Warnings written to D:\a\desklock-build\desklock-build\src\build-win\DeskLock\warn-DeskLock.txt
+8181 INFO: Graph cross-reference written to D:\a\desklock-build\desklock-build\src\build-win\DeskLock\xref-DeskLock.html
+8217 INFO: checking PYZ
+8217 INFO: Building PYZ because PYZ-00.toc is non existent
+8217 INFO: Building PYZ (ZlibArchive) D:\a\desklock-build\desklock-build\src\build-win\DeskLock\PYZ-00.pyz
+8398 INFO: Building PYZ (ZlibArchive) D:\a\desklock-build\desklock-build\src\build-win\DeskLock\PYZ-00.pyz completed successfully.
+8428 INFO: checking PKG
+8428 INFO: Building PKG because PKG-00.toc is non existent
+8428 INFO: Building PKG (CArchive) DeskLock.pkg
+12386 INFO: Building PKG (CArchive) DeskLock.pkg completed successfully.
+12406 INFO: Bootloader C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages\PyInstaller\bootloader\Windows-64bit-intel\runw.exe
+12406 INFO: checking EXE
+12406 INFO: Building EXE because EXE-00.toc is non existent
+12406 INFO: Building EXE from EXE-00.toc
+12406 INFO: Copying bootloader EXE to D:\a\desklock-build\desklock-build\src\dist-win\DeskLock.exe
+12410 INFO: Copying icon to EXE
+12412 INFO: Copying 0 resources to EXE
+12412 INFO: Embedding manifest in EXE
+12414 INFO: Appending PKG archive to EXE
+12424 INFO: Fixing EXE headers
+12521 INFO: Building EXE from EXE-00.toc completed successfully.
+12541 INFO: Build complete! The results are available in: D:\a\desklock-build\desklock-build\src\dist-win
