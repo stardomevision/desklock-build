@@ -1,7 +1,7 @@
 
 Length
 ------
- 30897
+ 37394
 
 
 
@@ -12,6 +12,7 @@ D:\a\desklock-build\desklock-build\src\desklock\__init__.py
 D:\a\desklock-build\desklock-build\src\desklock\autostart.py
 D:\a\desklock-build\desklock-build\src\desklock\builtin_plugins.py
 D:\a\desklock-build\desklock-build\src\desklock\config.py
+D:\a\desklock-build\desklock-build\src\desklock\guard.py
 D:\a\desklock-build\desklock-build\src\desklock\gui.py
 D:\a\desklock-build\desklock-build\src\desklock\locker.py
 D:\a\desklock-build\desklock-build\src\desklock\plugins.py
